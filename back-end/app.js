@@ -87,7 +87,7 @@ app.get('/about', async(req, res) => {
 
       "This website is a homework of mine where I am learning to build MERN stack application. This is a great starter website as the codebase is not too long, making it easy to study the code hands-on. I love learning by doing things and this is a great example of such a project.",
 
-      "This is all about me for now. If you have any question or like to reaach out, feel free to drop a message. I will get back to as soon as possible. Thank you for vising my awsome MERN stack site."
+      "This is all about me for now. If you have any question or like to reaach out, feel free to drop a message. I will get back to as soon as possible. Thank you for vising my awesome MERN stack site."
     ],
     imageLink : `${process.env.SERVER_HOSTNAME}/Kazi.png`
   })
