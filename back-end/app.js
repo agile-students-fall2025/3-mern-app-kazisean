@@ -83,11 +83,11 @@ app.post('/messages/save', async (req, res) => {
 app.get('/about', async(req, res) => {
   res.json({
     aboutMe: [
-      "Hello! My name is Kazi Hossain. I am currently a senior majoring in computer science at NYU with minors in Anthropology and Social Entrepreneurship. Outside of coding I really love riding bycyle around the city. I also like binge watching shows. Currently my favorite show is The Silent Sea, which is a sci-fi show about lunar water.",
+      "Hello! My name is Kazi Hossain. I am currently a senior majoring in computer science at NYU with minors in Anthropology and Social Entrepreneurship. Outside of coding, I really love riding a bicycle around the city. I also like binge-watching shows. Currently, my favorite show is The Silent Sea, which is a sci-fi show about lunar water.",
 
-      "This website is a homework of mine where I am learning to build MERN stack application. This is a great starter website as the codebase is not too long, making it easy to study the code hands-on. I love learning by doing things and this is a great example of such a project.",
+      "This website is a homework of mine where I am learning to build a MERN stack application. This is a great starter website as the codebase is not too long, making it easy to study the code hands-on. I love learning by doing things, and this is a great example of such a project.",
 
-      "This is all about me for now. If you have any question or like to reaach out, feel free to drop a message. I will get back to as soon as possible. Thank you for vising my awesome MERN stack site."
+      "This is all about me for now. If you have any questions or would like to reach out, feel free to drop a message. I will get back to you as soon as possible. Thank you for visiting my awesome MERN stack site."
     ],
     imageLink : `${process.env.SERVER_HOSTNAME}/Kazi.png`
   })
