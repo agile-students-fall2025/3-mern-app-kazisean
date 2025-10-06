@@ -8,6 +8,8 @@ const app = express() // instantiate an Express object
 app.use(morgan('dev', { skip: (req, res) => process.env.NODE_ENV === 'test' })) // log all incoming requests, except when in unit test mode.  morgan has a few logging default styles - dev is a nice concise color-coded style
 app.use(cors()) // allow cross-origin resource sharing
 
+app.use(express.static('public')) // serve local static file
+
 // use express's builtin body-parser middleware to parse any data included in a request
 app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
@@ -76,6 +78,19 @@ app.post('/messages/save', async (req, res) => {
       status: 'failed to save the message to the database',
     })
   }
+})
+
+app.get('/about', async(req, res) => {
+  res.json({
+    aboutMe: [
+      "Hello! My name is Kazi Hossain. I am currently a senior majoring in computer science at NYU with minors in Anthropology and Social Entrepreneurship. Outside of coding I really love riding bycyle around the city. I also like binge watching shows. Currently my favorite show is The Silent Sea, which is a sci-fi show about lunar water.",
+
+      "This website is a homework of mine where I am learning to build MERN stack application. This is a great starter website as the codebase is not too long, making it easy to study the code hands-on. I love learning by doing things and this is a great example of such a project.",
+
+      "This is all about me for now. If you have any question or like to reaach out, feel free to drop a message. I will get back to as soon as possible. Thank you for vising my awsome MERN stack site."
+    ],
+    imageLink : `${process.env.SERVER_HOSTNAME}/Kazi.png`
+  })
 })
 
 // export the express app we created to make it available to other modules

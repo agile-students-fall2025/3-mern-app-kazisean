@@ -1,0 +1,11 @@
+.my-image{
+    width: 300px;
+    height: 300px;
+    clip-path: circle();
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    text-align: left;
+    margin-bottom: 20px;
+}
